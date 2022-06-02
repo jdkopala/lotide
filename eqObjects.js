@@ -19,7 +19,6 @@ const eqArrays = function(arr1, arr2) {
 const eqObjects = function(obj1, obj2) {
   let keys1 = Object.keys(obj1);
   let keys2 = Object.keys(obj2);
-  console.log(keys1, keys2);
   if (keys1.length !== keys2.length) {
     return false;
   }
