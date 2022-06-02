@@ -19,20 +19,23 @@ const assertArraysEqual = function(arr1, arr2) {
 
 const letterPositions = function(string) {
   const result = {};
-  const noSpaces = string.split(' ').join('');
-  for (let c in noSpaces) {
-    if (!result[noSpaces[c]]) {
-      result[noSpaces[c]] = [];
-      result[noSpaces[c]].push(c);
-    } else if (result[noSpaces[c]]) {
-      result[noSpaces[c]].push(c);
+  for (let c = 0; c < string.length; c++) {
+    if (string[c] === ' ') {
+      c++;
+    }
+    if (!result[string[c]]) {
+      result[string[c]] = [];
+      result[string[c]].push(c);
+    } else if (result[string[c]]) {
+      result[string[c]].push(c);
     }
   }
+  console.log(result);
   return result;
 };
 
 let test1 = (letterPositions("hello").l);
 let test2 = (letterPositions("lighthouse in the house").h);
 
-assertArraysEqual(test1, ['2', '3']);
-assertArraysEqual(test2, ['3', '5', '13', '15']);
+console.log(assertArraysEqual(test1, [2, 3]));
+console.log(assertArraysEqual(test2, [3, 5, 15, 18]));
