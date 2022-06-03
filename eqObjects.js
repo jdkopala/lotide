@@ -30,7 +30,7 @@ const eqObjects = function(obj1, obj2) {
         }
         if (eqArrays(obj1[k], obj2[k])) {
           return true;
-        } 
+        }
       } else if (obj1[k] !== obj2[k]) {
         return false;
       }
