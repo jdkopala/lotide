@@ -6,17 +6,4 @@ const findKeyByValue = function(obj, val) {
   }
 };
 
-const bestTVShowsByGenre = {
-  sciFi: "The Expanse",
-  comedy: "Brooklyn Nine-Nine",
-  drama:  "The Wire",
-};
-
-const apples = {
-  red: "Red Delicious",
-  green: "Granny Smith",
-  yellow: "Golden Delicious",
-  pink: "Pink Lady",
-};
-
 module.exports = findKeyByValue;
