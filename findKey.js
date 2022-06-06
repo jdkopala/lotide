@@ -1,11 +1,3 @@
-const assertEqual = function(actual, expected) {
-  if (actual === expected) {
-    console.log(`🟢🟢🟢 Assertion Passed: ${actual} === ${expected}`);
-  } else if (actual !== expected) {
-    console.log(`🔴🔴🔴 Assertion Failed: ${actual} !== ${expected}`);
-  }
-};
-
 const findKey = function(obj, callback) {
   for (let k in obj) {
     if (callback(obj[k])) {
@@ -30,11 +22,4 @@ const numberOfWheels = {
   "unicycle": {wheels:1}
 };
 
-assertEqual(findKey(constellations, x => x.stars === 2), "noma");
-assertEqual(findKey(constellations, x => x.stars === 1), "Blue Hill");
-assertEqual(findKey(constellations, x => x.stars === 3), "Akaleri");
-assertEqual(findKey(constellations, x => x.stars === 9), undefined);
-assertEqual(findKey(numberOfWheels, x => x.wheels === 1), "unicycle");
-assertEqual(findKey(numberOfWheels, x => x.wheels === 3), "trike");
-assertEqual(findKey(numberOfWheels, x => x.wheels === 4), "truck");
-assertEqual(findKey(numberOfWheels, x => x.wheels === 18), undefined);
+module.exports = findKey;
