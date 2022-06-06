@@ -1,11 +1,22 @@
-const assertEqual = require('../assertEqual');
+const assert = require('chai').assert;
 const tail = require('../tail');
 
 const words = ["Yo Yo", "Lighthouse", "Labs"];
-let result = tail(words);
-assertEqual(words.length, 3); // Ensures the original array is untouched.
-for (let w of words) { // Check each entry in the original array
-  for (let c of result) { // Check each entry in the new tail array
-    assertEqual(c, w); // Use the assert equal function to ensure the tail array is correct. The head will not pass any test, the rest of the array should.
-  }
-};
+
+describe("#tail", () => {
+  it("should not alter the original array", () => {
+    assert.equal(words.length, 3);
+  })
+
+  it("should return ['Lighthouse', 'Labs'] for ['Yo yo', 'Lighthouse', 'Labs']", () => {
+    assert.deepEqual(tail(words), ["Lighthouse", "Labs"]);
+  })
+
+  it("should return [2,3,4,5,6] for [1,2,3,4,5,6]", () => {
+    assert.deepEqual(tail([1,2,3,4,5,6]), [2,3,4,5,6]);
+  })
+
+  it("should return an empty array for an input with one element", () => {
+    assert.deepEqual(tail([5]), []);
+  })
+})
