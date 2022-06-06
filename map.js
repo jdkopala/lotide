@@ -35,5 +35,5 @@ const results4 = map(words, word => word[word.length]);
 assertArraysEqual(map(words, word => word[0]), results1); // return the first letter of each word in the words array
 assertArraysEqual(map(words, word => word.length), results2); // return the length of each word in the array
 assertArraysEqual(map(words, word => word[2]), results3); // return the third index of each word in the array
-assertArraysEqual(map(words, word => word[word.length]), results4); // return the third index of each word in the array
+assertArraysEqual(map(words, word => word[word.length]), results4); // return the length of each word in the array
 
