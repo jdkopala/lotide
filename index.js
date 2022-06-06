@@ -16,16 +16,16 @@ const map = require('./map');
 
 
 module.exports = {
-  assertArraysEqual,
   assertEqual,
+  eqArrays,
+  assertArraysEqual,
+  eqObjects,
   assertObjectsEqual,
   head,
   tail,
   middle,
   countLetters,
   countOnly,
-  eqObjects,
-  eqArrays,
   findKey,
   findKeyByValue,
   flatten,
