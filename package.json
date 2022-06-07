@@ -1,6 +1,6 @@
 {
   "name": "@jdkopala/lotide",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A simple data manipulation library created as part of my learning at Lighthouse Labs.",
   "main": "index.js",
   "directories": {
